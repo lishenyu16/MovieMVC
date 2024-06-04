@@ -132,10 +132,28 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202406031655217_Initial.cs" />
+    <Compile Include="Migrations\202406031655217_Initial.Designer.cs">
+      <DependentUpon>202406031655217_Initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202406031805378_Rating.cs" />
+    <Compile Include="Migrations\202406031805378_Rating.Designer.cs">
+      <DependentUpon>202406031805378_Rating.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202406031827123_DataAnnotations.cs" />
+    <Compile Include="Migrations\202406031827123_DataAnnotations.Designer.cs">
+      <DependentUpon>202406031827123_DataAnnotations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Movie.cs" />
+    <Compile Include="Models\MovieDbContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\Movies.mdf" />
+    <Content Include="App_Data\Movies_log.ldf">
+      <DependentUpon>Movies.mdf</DependentUpon>
+    </Content>
     <Content Include="Content\bootstrap-grid.css" />
     <Content Include="Content\bootstrap-grid.min.css" />
     <Content Include="Content\bootstrap-grid.rtl.css" />
@@ -193,9 +211,7 @@
     <Content Include="Views\Movies\Edit.cshtml" />
     <Content Include="Views\Movies\Index.cshtml" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="App_Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Content Include="Content\bootstrap.rtl.min.css.map" />
     <Content Include="Content\bootstrap.rtl.css.map" />
@@ -222,6 +238,17 @@
     <Content Include="Scripts\bootstrap.bundle.js.map" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202406031655217_Initial.resx">
+      <DependentUpon>202406031655217_Initial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202406031805378_Rating.resx">
+      <DependentUpon>202406031805378_Rating.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202406031827123_DataAnnotations.resx">
+      <DependentUpon>202406031827123_DataAnnotations.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
